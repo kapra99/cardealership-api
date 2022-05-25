@@ -16,9 +16,4 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 db.carbrands = require("./carbrand.model.js")(sequelize, Sequelize);
 db.carmodels = require("./carmodel.model.js")(sequelize, Sequelize);
-db.carbrands.hasMany(db.carmodels, { as: "carmodels" });
-db.carmodels.belongsTo(db.carbrands, {
-    foreignKey: "carbrandId",
-    as: "carbrand",
-});
 module.exports = db;
