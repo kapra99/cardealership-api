@@ -29,8 +29,7 @@ app.get("/", (req, res) => {
     res.json({ message: "Welcome to kapra99 application." });
 });
 
-require("./app/routes/carbrand.routes")(app);
-require("./app/routes/carmodel.routes")(app);
+require('./app/routes/car.routes')(app);
 require('./app/routes/auth.routes')(app);
 require('./app/routes/user.routes')(app);
 

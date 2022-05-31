@@ -14,8 +14,7 @@ const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
 const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
-db.carbrands = require("./carbrand.model.js")(sequelize, Sequelize);
-db.carmodels = require("./carmodel.model.js")(sequelize, Sequelize);
+db.car = require("../models/car.model.js")(sequelize, Sequelize);
 db.user = require("../models/user.model.js")(sequelize, Sequelize);
 db.role = require("../models/role.model.js")(sequelize, Sequelize);
 
