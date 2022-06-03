@@ -18,18 +18,18 @@ app.use(express.urlencoded({ extended: true }));   /* bodyParser.urlencoded() is
 const db = require("./app/models");
 const Role = db.role;
 
-// db.sequelize.sync();
-db.sequelize.sync({force: true}).then(() => {
-  console.log('Drop and Resync Database with { force: true }');
-  initial();
-});
+db.sequelize.sync();
+// db.sequelize.sync({force: true}).then(() => {
+//   console.log('Drop and Resync Database with { force: true }');
+//   initial();
+// });
 
 // simple route
 app.get("/", (req, res) => {
     res.json({ message: "Welcome to kapra99 application." });
 });
 
-require('./app/routes/car.routes')(app);
+require("./app/routes/car.routes")(app);
 require('./app/routes/auth.routes')(app);
 require('./app/routes/user.routes')(app);
 
