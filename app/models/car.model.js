@@ -12,25 +12,34 @@ module.exports = (sequelize, Sequelize) => {
     model: {
       type: DataTypes.STRING
     },
-    dateofmanifactory: {
+    dateOfManifactory: {
       type: DataTypes.DATEONLY
     },
-    engineapacity: {
+    engineCapacity: {
       type: DataTypes.FLOAT
     },
-    fueltype: {
+    fuelType: {
       type: DataTypes.STRING
     },
-    gearboxtype: {
+    gearboxType: {
       type: DataTypes.STRING
     },
-    horsepower: {
+    horsePower: {
       type: DataTypes.INTEGER
     },
-    bodytype: {
+    bodyType: {
       type: DataTypes.STRING
     },
-    additionalinformation: {
+    additionalInformation: {
+      type: DataTypes.STRING
+    },
+    comfortExtras: {
+      type: DataTypes.STRING
+    },
+    securityExtras: {
+      type: DataTypes.STRING
+    },
+    otherExtras: {
       type: DataTypes.STRING
     },
     price: {
