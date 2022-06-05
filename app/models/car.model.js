@@ -35,6 +35,12 @@ module.exports = (sequelize, Sequelize) => {
     },
     price: {
       type: DataTypes.INTEGER
+    },
+    carThumbnail: {
+      type: DataTypes.STRING
+    },
+    carImages: {
+      type: DataTypes.STRING
     }
 
   },{timestamps:false});

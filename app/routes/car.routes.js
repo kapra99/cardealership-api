@@ -7,13 +7,13 @@ module.exports = app => {
   router.post("/", cars.create);
 
   // Retrieve all Tutorials
-  // router.get("/", cars.findAll);
+  router.get("/", cars.findAll);
 
   // Retrieve all published cars
   // router.get("/published", cars.findAllPublished);
 
   // Retrieve a single Tutorial with id
-  // router.get("/:id", cars.findOne);
+  router.get("/:id", cars.findOne);
 
   // Update a Tutorial with id
   // router.put("/:id", cars.update);
