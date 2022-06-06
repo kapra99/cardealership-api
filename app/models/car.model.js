@@ -24,11 +24,11 @@ module.exports = (sequelize, Sequelize) => {
     gearboxType: {
       type: DataTypes.STRING
     },
-    horsePower: {
-      type: DataTypes.INTEGER
-    },
     bodyType: {
       type: DataTypes.STRING
+    },
+    horsePower: {
+      type: DataTypes.INTEGER
     },
     additionalInformation: {
       type: DataTypes.STRING
