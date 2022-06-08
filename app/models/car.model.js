@@ -34,13 +34,13 @@ module.exports = (sequelize, Sequelize) => {
       type: DataTypes.STRING
     },
     comfortExtras: {
-      type: DataTypes.STRING
+      type: DataTypes.JSON
     },
     securityExtras: {
-      type: DataTypes.STRING
+      type: DataTypes.JSON
     },
     otherExtras: {
-      type: DataTypes.STRING
+      type: DataTypes.JSON
     },
     price: {
       type: DataTypes.INTEGER
