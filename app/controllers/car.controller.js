@@ -28,7 +28,8 @@ exports.create = (req, res) => {
     otherExtras: req.body.otherExtras,
     price: req.body.price,
     carThumbnail: req.body.carThumbnail,
-    carImages: req.body.carImages
+    carImages: req.body.carImages,
+    published: req.body.published
   };
 
   // Save Tutorial in the database
@@ -107,57 +108,41 @@ exports.update = (req, res) => {
 };
 
 // Delete a Tutorial with the specified id in the request
-// exports.delete = (req, res) => {
-//   const id = req.params.id;
-//
-//   Tutorial.destroy({
-//     where: { id: id }
-//   })
-//     .then(num => {
-//       if (num == 1) {
-//         res.send({
-//           message: "Tutorial was deleted successfully!"
-//         });
-//       } else {
-//         res.send({
-//           message: `Cannot delete Tutorial with id=${id}. Maybe Tutorial was not found!`
-//         });
-//       }
-//     })
-//     .catch(err => {
-//       res.status(500).send({
-//         message: "Could not delete Tutorial with id=" + id
-//       });
-//     });
-// };
+exports.delete = (req, res) => {
+  const id = req.params.id;
 
-// Delete all Tutorials from the database.
-// exports.deleteAll = (req, res) => {
-//   Tutorial.destroy({
-//     where: {},
-//     truncate: false
-//   })
-//     .then(nums => {
-//       res.send({ message: `${nums} Tutorials were deleted successfully!` });
-//     })
-//     .catch(err => {
-//       res.status(500).send({
-//         message:
-//           err.message || "Some error occurred while removing all tutorials."
-//       });
-//     });
-// };
+  Car.destroy({
+    where: { id: id }
+  })
+    .then(num => {
+      if (num == 1) {
+        res.send({
+          message: "Car was deleted successfully!"
+        });
+      } else {
+        res.send({
+          message: `Cannot delete Car with id=${id}. Maybe Car was not found!`
+        });
+      }
+    })
+    .catch(err => {
+      res.status(500).send({
+        message: "Could not delete Car with id=" + id
+      });
+    });
+};
+
 
 // find all published Tutorial
-// exports.findAllPublished = (req, res) => {
-//   Tutorial.findAll({ where: { published: true } })
-//     .then(data => {
-//       res.send(data);
-//     })
-//     .catch(err => {
-//       res.status(500).send({
-//         message:
-//           err.message || "Some error occurred while retrieving tutorials."
-//       });
-//     });
-// };
+exports.findAllPublished = (req, res) => {
+  Car.findAll({ where: { published: true } })
+    .then(data => {
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send({
+        message:
+          err.message || "Some error occurred while retrieving tutorials."
+      });
+    });
+};

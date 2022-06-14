@@ -1,6 +1,6 @@
 const uploadFile = require("../middleware/upload");
 const fs = require("fs");
-const baseUrl = "http://localhost:8080/api/cars/files/";
+
 const displayBaseUrl = "http://localhost:8080/static/images/";
 
 const upload = async (req, res) => {

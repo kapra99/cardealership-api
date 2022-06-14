@@ -46,11 +46,16 @@ module.exports = (sequelize, Sequelize) => {
       type: DataTypes.INTEGER
     },
     carThumbnail: {
-      type: DataTypes.STRING
+      type: DataTypes.JSON
     },
     carImages: {
-      type: DataTypes.STRING
+      type: DataTypes.JSON
+    },
+    published: {
+      type: DataTypes.BOOLEAN
     }
+
+
 
   },{timestamps:false});
 

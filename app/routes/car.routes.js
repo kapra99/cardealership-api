@@ -7,13 +7,13 @@ module.exports = app => {
 
   router.get("/", cars.findAll);
 
+  router.get("/published", cars.findAllPublished);
 
   router.get("/:id", cars.findOne);
 
   router.put("/:id", cars.update);
 
-  // Delete a Tutorial with id
-  // router.delete("/:id", cars.delete);
+  router.delete("/:id", cars.delete);
 
   // Delete all cars
   // router.delete("/", cars.deleteAll);

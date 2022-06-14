@@ -9,6 +9,9 @@ exports.userBoard = (req, res) => {
 exports.adminBoard = (req, res) => {
   res.status(200).send("Admin Content.");
 };
+exports.addCarBoard = (req, res) => {
+  res.status(200).send("Car board.");
+};
 
 exports.moderatorBoard = (req, res) => {
   res.status(200).send("Moderator Content.");
