@@ -16,7 +16,7 @@ module.exports = (sequelize, Sequelize) => {
       type: DataTypes.DATEONLY
     },
     engineCapacity: {
-      type: DataTypes.FLOAT
+      type: DataTypes.STRING
     },
     fuelType: {
       type: DataTypes.STRING
